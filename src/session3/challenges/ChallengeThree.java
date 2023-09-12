@@ -11,12 +11,12 @@ public class ChallengeThree {
 
         System.out.println("Hello! Type your first number: ");
         int number = scanner.nextInt();
-        boolean bool = (number==number);
+        boolean myBoolean = (number == number);
 
-if (number >=0)
-    System.out.println(bool);
-else
-    System.out.println(!bool );
+        if (number >= 0)
+            System.out.println(myBoolean);
+        else
+            System.out.println(!myBoolean);
 
 
     }

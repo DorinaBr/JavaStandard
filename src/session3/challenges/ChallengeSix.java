@@ -16,9 +16,9 @@ public class ChallengeSix {
 
         String newLine = System.lineSeparator();
 
-        System.out.println("First number == second number: " + (number1==number2) + newLine + "First number != second number: " + (number1!=number2) );
-        System.out.println("First number > second number: " + (number1>number2) + newLine + "First number < second number: " + (number1<number2) );
-        System.out.println("First number >= second number: " + (number1>=number2) + newLine + "First number <= second number: " + (number1<=number2) );
+        System.out.println("First number == second number: " + (number1 == number2) + newLine + "First number != second number: " + (number1 != number2));
+        System.out.println("First number > second number: " + (number1 > number2) + newLine + "First number < second number: " + (number1 < number2));
+        System.out.println("First number >= second number: " + (number1 >= number2) + newLine + "First number <= second number: " + (number1 <= number2));
     }
 
 }

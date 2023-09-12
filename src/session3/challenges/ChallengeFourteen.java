@@ -11,7 +11,7 @@ public class ChallengeFourteen {
         System.out.println("Type a number between 1 and 100: ");
         int number = scanner.nextInt();
 
-        String result = (number <=100) ? "Your number is within the given range." : "Your number should be between 1 and 100! Please, try again!" ;
+        String result = (number <= 100) ? "Your number is within the given range." : "Your number should be between 1 and 100! Please, try again!";
 
         System.out.println(result);
     }

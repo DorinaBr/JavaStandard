@@ -13,7 +13,7 @@ public class ChallengeNine {
         System.out.println("Type the width of the rectangle: ");
         int width = scanner.nextInt();
 
-        System.out.println("The area of the rectangle is : " + (length*width));
+        System.out.println("The area of the rectangle is : " + (length * width));
 
     }
 }

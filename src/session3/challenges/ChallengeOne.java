@@ -15,8 +15,8 @@ public class ChallengeOne {
 
         String newline = System.lineSeparator();
 
-        System.out.println("Now you're gonna see operations with your numbers: " + newline + "Addition: " + (numberOne+numberTwo));
-        System.out.println("Subtraction: " + (numberOne-numberTwo) + newline + "Multiplication: " + (numberOne*numberTwo)+ newline + "Division: " + (numberOne/numberTwo) );
-        System.out.println("Modulus: " + (numberOne%numberTwo) );
+        System.out.println("Now you're gonna see operations with your numbers: " + newline + "Addition: " + (numberOne + numberTwo));
+        System.out.println("Subtraction: " + (numberOne - numberTwo) + newline + "Multiplication: " + (numberOne * numberTwo) + newline + "Division: " + (numberOne / numberTwo));
+        System.out.println("Modulus: " + (numberOne % numberTwo));
     }
 }

@@ -14,10 +14,10 @@ public class ChallengeThirteen {
         double discount = scanner.nextDouble();
 
 
-        price-= price*discount/100;
+        price -= price * discount / 100;
 
 
-        System.out.println("The final price is: " +  price);
+        System.out.println("The final price is: " + price);
     }
 }
 

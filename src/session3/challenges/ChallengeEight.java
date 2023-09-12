@@ -8,11 +8,11 @@ public class ChallengeEight {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Type the first byte value: ");
-        byte firstB = scanner.nextByte();
+        byte firstByte = scanner.nextByte();
 
         System.out.println("Type a second byte value: ");
-        byte secondB = scanner.nextByte();
+        byte secondByte = scanner.nextByte();
 
-        System.out.println("The sum of the 2 values: " + (firstB+secondB));
+        System.out.println("The sum of the 2 values: " + (firstByte + secondByte));
     }
 }

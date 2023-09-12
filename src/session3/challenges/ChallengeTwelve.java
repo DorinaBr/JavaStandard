@@ -8,9 +8,9 @@ public class ChallengeTwelve {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Type your number: ");
-        int num1 = scanner.nextInt();
+        int number1 = scanner.nextInt();
         String newLine = System.lineSeparator();
 
-        System.out.println("Incremented by 1, is: " + (++num1) + newLine + "Decrementation by 1 of the previous result: " + (--num1));
+        System.out.println("Incremented by 1, is: " + (++number1) + newLine + "Decrementation by 1 of the previous result: " + (--number1));
     }
 }

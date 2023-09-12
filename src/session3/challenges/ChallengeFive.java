@@ -5,19 +5,19 @@ import java.util.Scanner;
 //Create a Java program that demonstrates the use of each compound assignment operator with integers.
 public class ChallengeFive {
     public static void main(String[] args) {
-        int num1 = 5;
-        int num2;
-        num2 = num1;
-        System.out.println(num2);
+        int numberOne = 5;
+        int numberTwo;
+        numberTwo = numberOne;
+        System.out.println(numberTwo);
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Hello! Type your first number: ");
-        int numberOne = scanner.nextInt();
+        int firstInput = scanner.nextInt();
         System.out.println("Now type your second number: ");
-        int numberTwo = scanner.nextInt();
+        int secondInput = scanner.nextInt();
         String newline = System.lineSeparator();
 
-        System.out.println("+= : " + (numberOne+=numberTwo) + newline + "-= : " + (numberOne-=numberTwo) + newline + "*= : " + (numberOne *=numberTwo));
-        System.out.println( "/= : " + (numberOne/=numberTwo) + newline + "%= : " + (numberOne%=numberTwo));
+        System.out.println("+= : " + (firstInput += secondInput) + newline + "-= : " + (firstInput -= secondInput) + newline + "*= : " + (firstInput *= secondInput));
+        System.out.println("/= : " + (firstInput /= secondInput) + newline + "%= : " + (firstInput %= secondInput));
     }
 }

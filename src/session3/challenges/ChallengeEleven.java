@@ -8,11 +8,11 @@ public class ChallengeEleven {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Type your first boolean value: ");
-        boolean bool1 = scanner.nextBoolean();
+        boolean firstBoolean = scanner.nextBoolean();
 
         System.out.println("Type the second boolean value:");
-        boolean bool2 = scanner.nextBoolean();
+        boolean secondBoolean = scanner.nextBoolean();
 
-        System.out.println("Values with applied '!' operator: " + (!bool1) + ", " + (!bool2));
+        System.out.println("Values with applied '!' operator: " + (!firstBoolean) + ", " + (!secondBoolean));
     }
 }
