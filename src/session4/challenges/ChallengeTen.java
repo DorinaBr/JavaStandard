@@ -7,7 +7,7 @@ import java.util.ArrayList;
 // Print both lists and observe the output.
 public class ChallengeTen {
     public static void main(String[] args) {
-        ArrayList<String> listOne = new ArrayList<String>();
+        ArrayList<String> listOne = new ArrayList<>();
 
         listOne.add("Ana");
         listOne.add("Peter");
