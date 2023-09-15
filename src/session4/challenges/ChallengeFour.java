@@ -1,6 +1,6 @@
 package session4.challenges;
-//Write a Java program where you declare two integer variables heightOne and heightTwo with any values.
-// Use a ternary operator to determine the greater height and assign it to a variable maximumHeight. Print the result.
+/*Write a Java program where you declare two integer variables heightOne and heightTwo with any values.
+ Use a ternary operator to determine the greater height and assign it to a variable maximumHeight. Print the result.*/
 
 import java.util.Scanner;
 
