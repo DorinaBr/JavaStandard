@@ -2,9 +2,9 @@ package session4.challenges;
 
 import java.util.ArrayList;
 
-//Write a Java program that creates two distinct ArrayList objects, listOne and listTwo.
-// Add some elements to listOne and assign listOne to listTwo. Now modify listOne by adding a new element.
-// Print both lists and observe the output.
+/*Write a Java program that creates two distinct ArrayList objects, listOne and listTwo.
+ Add some elements to listOne and assign listOne to listTwo. Now modify listOne by adding a new element.
+ Print both lists and observe the output.*/
 public class ChallengeTen {
     public static void main(String[] args) {
         ArrayList<String> listOne = new ArrayList<>();
