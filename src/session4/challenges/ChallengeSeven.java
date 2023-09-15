@@ -1,9 +1,8 @@
 package session4.challenges;
 
 import java.util.Scanner;
-
-// Write a Java program that determines the type of a triangle based on its sides. Declare three variables sideOne, sideTwo and sideThree to represent the sides of the triangle.
-// Use the ternary operator to determine and print whether the triangle is "Equilateral", "Isosceles", or "Scalene"
+/* Write a Java program that determines the type of a triangle based on its sides. Declare three variables sideOne, sideTwo and sideThree to represent the sides of the triangle.
+ Use the ternary operator to determine and print whether the triangle is "Equilateral", "Isosceles", or "Scalene".*/
 public class ChallengeSeven {
     public static void main(String[] args) {
         System.out.println("Find out what type of triangle it is!");
