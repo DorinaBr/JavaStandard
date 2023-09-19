@@ -12,3 +12,4 @@ public class ChallengeFifteen {
         System.out.println("Decreased total: " + (total -= 20) + newLine + "Multiplied total: " + (total *= 2));
     }
 }
+
