@@ -12,15 +12,16 @@ public class ChallengeTwelve {
 
         int number;
         int sum = 0;
+        int predefinedNumber = 5;
 
         for (int index = 1; index <= 10; index++) {
             System.out.println("Enter number " + index + " : ");
             number = scanner.nextInt();
 
-            if (number > 5) {
+            if (number > predefinedNumber) {
                 sum = sum + number;
 
-                while (number <= 5) {
+                while (number <= predefinedNumber) {
                     continue;
                 }
             }
