@@ -84,7 +84,6 @@ public class StringChallenges {
 
             if (input.charAt(index) == 'a' || input.charAt(index) == 'e' || input.charAt(index) == 'i' || input.charAt(index) == 'o' || input.charAt(index) == 'u') {
                 continue;
-
             } else {
                 wordWithoutVowels.append(input.charAt(index));
             }
@@ -138,7 +137,6 @@ public class StringChallenges {
         System.out.println("\n" + "Enter your word: ");
         String input = scanner.next();
         char[] characters = input.toCharArray();
-
 
         StringBuilder wordWithoutDuplicates = new StringBuilder();
 
