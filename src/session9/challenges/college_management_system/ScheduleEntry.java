@@ -7,7 +7,6 @@ import java.time.LocalTime;
 public class ScheduleEntry {
 
     private DayOfWeek dayOfWeek;
-
     private Duration duration;
     private LocalTime startsAt;
 

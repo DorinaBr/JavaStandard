@@ -13,8 +13,6 @@ public class CollegeManagementSystem {
                 2781804226711L, 45, LocalDate.of(1978, Month.APRIL, 18));
         Course englishCourse = new Course("English", "Literature", new ScheduleEntry(DayOfWeek.THURSDAY, Duration.ofHours(1), LocalTime.of(11, 0)), englishProfessor);
 
-
-
         Student student = new Student("Alice", "Newbie", "female", "13 Peacock Street, London",
                 1912110228811L, 31, LocalDate.of(1991, Month.OCTOBER, 21), List.of(mathCourse, englishCourse));
 

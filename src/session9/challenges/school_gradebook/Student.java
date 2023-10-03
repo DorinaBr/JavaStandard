@@ -9,6 +9,11 @@ public class Student {
     private String firstName;
     private String lastName;
     private final List<Grade> grades = new ArrayList<>();
+    public Student(UUID studentId, String firstName, String lastName) {
+        this.studentId = studentId;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
 
     public void addGrade(Grade grade) {
         grades.add(grade);
@@ -20,12 +25,6 @@ public class Student {
             sum += grade.getValue();
         }
         return sum / grades.size();
-    }
-
-    public Student(UUID studentId, String firstName, String lastName) {
-        this.studentId = studentId;
-        this.firstName = firstName;
-        this.lastName = lastName;
     }
 
     public UUID getStudentId() {

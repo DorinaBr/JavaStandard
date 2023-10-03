@@ -14,7 +14,6 @@ public class Student {
     private LocalDate birthday;
     private List<Course> courses;
 
-
     public Student(String firstName, String lastName, String gender, String address, long cnp, int age, LocalDate birthday, List<Course> courses) {
         this.firstName = firstName;
         this.lastName = lastName;
