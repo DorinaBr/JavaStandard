@@ -25,7 +25,5 @@ public class BinaryArithmeticOperators {
         short myByte1 = 3;
         short myByte2 = 5;
         //short result = myByte1 + myByte2; -> this leads to compile errors due to numeric promotion
-
-
     }
 }
