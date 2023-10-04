@@ -1,4 +1,4 @@
-package session10.practice.car_dealership;
+package session10_oop_concepts.practice.car_dealership;
 
 public class Car {
 

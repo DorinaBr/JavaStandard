@@ -1,4 +1,4 @@
-package session10.practice.inheritance;
+package session10_oop_concepts.practice.inheritance;
 
 public class MultilevelInheritance {
 }

@@ -1,4 +1,4 @@
-package session10.practice.bank_account;
+package session10_oop_concepts.practice.bank_account;
 
 public class BankAccount {
 

@@ -1,4 +1,4 @@
-package session10.practice.encapsulation;
+package session10_oop_concepts.practice.encapsulation;
 
 public class TestEncapsulation {
 
