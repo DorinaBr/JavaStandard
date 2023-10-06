@@ -9,7 +9,7 @@ public class Tesla extends ElectricCar {
     }
 
     public void enableAutopilot() {
-        System.out.println("Tesla's autopilot enabled.");
+        System.out.println("Autopilot enabled.");
     }
 
     @Override

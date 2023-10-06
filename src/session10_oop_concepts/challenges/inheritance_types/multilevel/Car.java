@@ -17,7 +17,7 @@ public class Car {
     }
 
     public void stop() {
-        System.out.println("The car stops.");
+        System.out.println("The car stops");
     }
 
     public void accelerate() {

@@ -11,7 +11,7 @@ public class ElectricCar extends Car {
     }
 
     public void charge() {
-        System.out.println("The electric car charges.");
+        System.out.println("The electric car charges up.");
     }
 
     public String getBatteryCapacity() {
