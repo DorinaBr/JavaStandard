@@ -4,7 +4,7 @@ public class Tesla extends ElectricCar {
     private String autopilotVersion;
 
     public Tesla(String model, int year, String make, String batteryCapacity, int range, String autopilotVersion) {
-        super(model, year, make, batteryCapacity, range);
+        super(model, make, year, batteryCapacity, range);
         this.autopilotVersion = autopilotVersion;
     }
 
