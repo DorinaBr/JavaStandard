@@ -1,0 +1,1 @@
+Write a program that prompts the user to enter a name and an age, and formats them into a sentence using the String.format() method. Print out the formatted sentence.
