@@ -14,6 +14,7 @@ public class AppInterface {
     public Map<ResourceType, Integer> getAvailableResources(String projectName) {
         return ProjectManager.getProject(projectName).getAvailableResources();
     }
+
     public void consumeAvailableResources(String projectName, ResourceType type, Integer quantity) {
         ProjectManager.getProject(projectName).consumeAvailableResource(type, quantity);
     }
@@ -27,7 +28,6 @@ public class AppInterface {
     }
 
 
-
     public void setStatus(String projectName, ProjectStatus status) {
         ProjectManager.getProject(projectName).setStatus(status);
     }
@@ -36,15 +36,15 @@ public class AppInterface {
         return ProjectManager.getProject(projectName).getStatus();
     }
 
-    public String addNewEmployee(String firstName, String lastName, EmployeeRole role){
-       return EmployeeManager.addNewEmployee(firstName, lastName, role).getId();
+    public String addNewEmployee(String firstName, String lastName, EmployeeRole role) {
+        return EmployeeManager.addNewEmployee(firstName, lastName, role).getId();
     }
 
-    public Team addNewTeam(String name, List<String> employeeIds){
+    public Team addNewTeam(String name, List<String> employeeIds) {
         List<Employee> employees = new ArrayList<>();
-        for(String employeeId : employeeIds){
+        for (String employeeId : employeeIds) {
             employees.add(EmployeeManager.getEmployee(employeeId));
         }
-        return TeamManager.addNewTeam(name,employees);
+        return TeamManager.addNewTeam(name, employees);
     }
 }
