@@ -1,5 +1,7 @@
 package session12_polymorphism.challenges.construction_project_in_progress;
 
+import java.util.List;
+
 import static session12_polymorphism.challenges.construction_project_in_progress.ResourceType.*;
 
 public class Main {
@@ -24,5 +26,6 @@ public class Main {
         api.addNewEmployee("Bob", "Marley", EmployeeRole.LEAD);
         api.addNewEmployee("George", "Bush", EmployeeRole.CARPENTER);
 
+        Team team = new Team("Team1", List<String>);
     }
 }
