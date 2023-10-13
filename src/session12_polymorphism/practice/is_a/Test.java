@@ -5,7 +5,7 @@ public class Test {
     public static void main(String[] args) {
         //using inheritance
         Car car = new Car();
-        car.star();
+        car.start();
         car.drive();
     }
 }
