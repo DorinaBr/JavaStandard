@@ -1,0 +1,7 @@
+package session12_polymorphism.challenges.presentation_examples_recreated.runtime_time_poly;
+
+public class SubclassOne extends Parent{
+    void print() {
+        System.out.println("This is SubclassOne.");
+    }
+}
