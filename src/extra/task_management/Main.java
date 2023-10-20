@@ -1,9 +1,7 @@
 package extra.task_management;
 
-import java.util.HashMap;
-import java.util.InputMismatchException;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
+import java.util.stream.Collectors;
 
 
 /*
@@ -58,11 +56,36 @@ public class Main {
                 printTask(id);
                 break;
             case 4:
+                printAllTasks();
+                break;
+            case 5:
+                printTasksByStatus(readStatus());
+                break;
+            case 6:
                 return;
             default:
                 System.out.println("Invalid option.");
         }
         openMenu();
+    }
+
+    private static void printTasksByStatus(Task.Status status) {
+        tasks.values().stream().filter(task -> task.getStatus().equals(status)).forEach(System.out::println); // .forEach(task -> System.out.println(task))
+//        Map<String, Task> taskNames = tasks.values().stream().collect(Collectors.toMap(Task::getName, task -> task));
+//        System.out.println(taskNames);
+//
+//        for (Task task : tasks.values()) {
+//            if (status.equals(task.getStatus())) {
+//                System.out.println(task);
+//            }
+//        }
+    }
+
+    private static void printAllTasks() {
+        tasks.values().forEach(System.out::println);
+//        for (Task task : tasks.values()) {
+//            System.out.println(task);
+//        }
     }
 
     private static long readId() {
@@ -108,6 +131,8 @@ public class Main {
         System.out.println("1. Create new task");
         System.out.println("2. Retrieve task by ID");
         System.out.println("3. Update task status");
-        System.out.println("4. Exit");
+        System.out.println("4. Retrieve all tasks.");
+        System.out.println("5. Retrieve tasks by status.");
+        System.out.println("6. Exit");
     }
 }
