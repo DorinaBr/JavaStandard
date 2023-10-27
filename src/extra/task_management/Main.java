@@ -83,9 +83,6 @@ public class Main {
 
     private static void printAllTasks() {
         tasks.values().forEach(System.out::println);
-//        for (Task task : tasks.values()) {
-//            System.out.println(task);
-//        }
     }
 
     private static long readId() {
