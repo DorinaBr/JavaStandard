@@ -1,9 +1,6 @@
 package extra.task_management;
 
-import java.util.HashMap;
-import java.util.InputMismatchException;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 
 /*
@@ -58,11 +55,25 @@ public class Main {
                 printTask(id);
                 break;
             case 4:
+                printAllTasks();
+                break;
+            case 5:
+                retrieveTasksByStatus(readStatus());
+                break;
+            case 6:
                 return;
             default:
                 System.out.println("Invalid option.");
         }
         openMenu();
+    }
+
+    private static List<Task> retrieveTasksByStatus(Task.Status status) {
+        return tasks.values().stream().filter(task -> status.equals(task.getStatus())).toList();
+    }
+
+    private static void printAllTasks() {
+        System.out.println(tasks);
     }
 
     private static long readId() {
@@ -108,6 +119,8 @@ public class Main {
         System.out.println("1. Create new task");
         System.out.println("2. Retrieve task by ID");
         System.out.println("3. Update task status");
-        System.out.println("4. Exit");
+        System.out.println("4. Retrieve all tasks");
+        System.out.println("5. Retrieve all tasks in a certain status");
+        System.out.println("6. Exit");
     }
 }
