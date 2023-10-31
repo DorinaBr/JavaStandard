@@ -1,7 +1,9 @@
 package extra.task_management;
 
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.HashMap;
+import java.util.InputMismatchException;
+import java.util.Map;
+import java.util.Scanner;
 
 
 /*
@@ -84,6 +86,11 @@ public class Main {
     private static void printAllTasks() {
         tasks.values().forEach(System.out::println);
     }
+
+//    private static List<Task> retrieveTasksByStatus(Task.Status status) {
+//        return tasks.values().stream().filter(task -> status.equals(task.getStatus())).toList();
+//    }
+
 
     private static long readId() {
         try {
