@@ -1,9 +1,6 @@
 package extra.task_management;
 
-import java.util.HashMap;
-import java.util.InputMismatchException;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 
 /*
@@ -61,7 +58,7 @@ public class Main {
                 printAllTasks();
                 break;
             case 5:
-                printTasksByStatus(readStatus());
+                retrieveTasksByStatus(readStatus());
                 break;
             case 6:
                 return;
@@ -71,26 +68,13 @@ public class Main {
         openMenu();
     }
 
-    private static void printTasksByStatus(Task.Status status) {
-        tasks.values().stream().filter(task -> task.getStatus().equals(status)).forEach(System.out::println); // .forEach(task -> System.out.println(task))
-//        Map<String, Task> taskNames = tasks.values().stream().collect(Collectors.toMap(Task::getName, task -> task));
-//        System.out.println(taskNames);
-//
-//        for (Task task : tasks.values()) {
-//            if (status.equals(task.getStatus())) {
-//                System.out.println(task);
-//            }
-//        }
+    private static List<Task> retrieveTasksByStatus(Task.Status status) {
+        return tasks.values().stream().filter(task -> status.equals(task.getStatus())).toList();
     }
 
     private static void printAllTasks() {
         tasks.values().forEach(System.out::println);
     }
-
-//    private static List<Task> retrieveTasksByStatus(Task.Status status) {
-//        return tasks.values().stream().filter(task -> status.equals(task.getStatus())).toList();
-//    }
-
 
     private static long readId() {
         try {
