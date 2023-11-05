@@ -1,6 +1,9 @@
 package extra.task_management;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.InputMismatchException;
+import java.util.Map;
+import java.util.Scanner;
 
 
 /*
@@ -59,8 +62,12 @@ public class Main {
                 printTasks(tasks.values());
                 break;
             case 5:
+
                List<Task> tasksByStatus = retrieveTasks(readStatus());
                printTasks(tasksByStatus);
+
+                printTasksByStatus(readStatus());
+
                 break;
             case 6:
                 createUser();
@@ -75,6 +82,7 @@ public class Main {
         }
         openMenu();
     }
+
 
     private static void printUser(String userNameInput) {
         System.out.println(users.get(userNameInput));
@@ -113,6 +121,27 @@ public class Main {
     private static void printTasks(Collection<Task> tasks) {
         tasks.forEach(System.out::println);
     }
+
+    private static void printTasksByStatus(Task.Status status) {
+        tasks.values().stream().filter(task -> task.getStatus().equals(status)).forEach(System.out::println); // .forEach(task -> System.out.println(task))
+//        Map<String, Task> taskNames = tasks.values().stream().collect(Collectors.toMap(Task::getName, task -> task));
+//        System.out.println(taskNames);
+//
+//        for (Task task : tasks.values()) {
+//            if (status.equals(task.getStatus())) {
+//                System.out.println(task);
+//            }
+//        }
+    }
+
+    private static void printAllTasks() {
+        tasks.values().forEach(System.out::println);
+    }
+
+//    private static List<Task> retrieveTasksByStatus(Task.Status status) {
+//        return tasks.values().stream().filter(task -> status.equals(task.getStatus())).toList();
+//    }
+
 
 
     private static long readId() {
@@ -158,10 +187,16 @@ public class Main {
         System.out.println("1. Create new task");
         System.out.println("2. Retrieve task by ID");
         System.out.println("3. Update task status");
+
         System.out.println("4. Retrieve all tasks");
         System.out.println("5. Retrieve all tasks in a certain status");
         System.out.println("6. Create user");
         System.out.println("7. Retrieve user for username");
         System.out.println("8. Exit");
+
+        System.out.println("4. Retrieve all tasks.");
+        System.out.println("5. Retrieve tasks by status.");
+        System.out.println("6. Exit");
+
     }
 }
