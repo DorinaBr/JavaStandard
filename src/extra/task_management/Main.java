@@ -1,9 +1,6 @@
 package extra.task_management;
 
-import java.util.HashMap;
-import java.util.InputMismatchException;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 
 /*
@@ -26,17 +23,12 @@ Create a task management application that allows users to:
 - retrieve user for username
     - parameters: username
     - returns: user
-- assign a task to a user
-    - parameters: username
-- retrieve all tasks assigned to a certain user
-    - parameters: username
-    - returns: tasks
-- send email to user with list of tasks in statuses NEW or IN_PROGRESS (emailing will be done by just printing in console)
  */
 public class Main {
 
     private static final Map<Long, Task> tasks = new HashMap<>();
     private static final Map<String, User> users = new HashMap<>();
+
 
     public static void main(String[] args) {
         openMenu();
@@ -62,12 +54,9 @@ public class Main {
                 printTasks(tasks.values());
                 break;
             case 5:
-
-               List<Task> tasksByStatus = retrieveTasks(readStatus());
-               printTasks(tasksByStatus);
-
+                List<Task> tasksByStatus = retrieveTasks(readStatus());
+                printTasks(tasksByStatus);
                 printTasksByStatus(readStatus());
-
                 break;
             case 6:
                 createUser();
@@ -87,11 +76,12 @@ public class Main {
     private static void printUser(String userNameInput) {
         System.out.println(users.get(userNameInput));
     }
-    private static String readEmail(){
-        try{
+
+    private static String readEmail() {
+        try {
             System.out.println("Enter your email: ");
             return new Scanner(System.in).next();
-        }catch (NoSuchElementException exception){
+        } catch (NoSuchElementException exception) {
             System.out.println("Invalid email");
             return readEmail();
         }
@@ -101,11 +91,12 @@ public class Main {
         try {
             System.out.println("Enter the username: ");
             return new Scanner(System.in).next();
-        }catch (NoSuchElementException exception){
+        } catch (NoSuchElementException exception) {
             System.out.println("Invalid username");
             return readUserName();
         }
     }
+
     private static void createUser() {
         String userName = readUserName();
         String email = readEmail();
@@ -133,16 +124,6 @@ public class Main {
 //            }
 //        }
     }
-
-    private static void printAllTasks() {
-        tasks.values().forEach(System.out::println);
-    }
-
-//    private static List<Task> retrieveTasksByStatus(Task.Status status) {
-//        return tasks.values().stream().filter(task -> status.equals(task.getStatus())).toList();
-//    }
-
-
 
     private static long readId() {
         try {
@@ -187,16 +168,12 @@ public class Main {
         System.out.println("1. Create new task");
         System.out.println("2. Retrieve task by ID");
         System.out.println("3. Update task status");
-
         System.out.println("4. Retrieve all tasks");
         System.out.println("5. Retrieve all tasks in a certain status");
         System.out.println("6. Create user");
         System.out.println("7. Retrieve user for username");
         System.out.println("8. Exit");
 
-        System.out.println("4. Retrieve all tasks.");
-        System.out.println("5. Retrieve tasks by status.");
-        System.out.println("6. Exit");
 
     }
 }

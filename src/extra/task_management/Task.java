@@ -6,6 +6,7 @@ public class Task {
 
     private final String name;
     private final long id = Math.abs(UUID.randomUUID().getMostSignificantBits());
+    private User user;
     private Status status = Status.NEW;
 
     public Task(String name) {
@@ -26,6 +27,10 @@ public class Task {
 
     public void setStatus(Status status) {
         this.status = status;
+    }
+
+    public User getUser() {
+        return user;
     }
 
     @Override
